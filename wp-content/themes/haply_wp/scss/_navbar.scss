@@ -1,0 +1,102 @@
+.navbar {
+    &-custom {
+      @media (max-width: 1300px) and (min-width: 992px) {
+        position: absolute;
+        bottom: 1.125rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+      @media (max-width: 991px) {
+        position: absolute;
+        left: 0.625rem;
+        width: 100%;
+      }
+  
+      .navbar-toggler {
+        color: $white;
+        font-size: 1.5rem;
+        padding: 0;
+  
+        &:focus,
+        &:active {
+          outline: none;
+          box-shadow: none;
+          border: none;
+        }
+      }
+  
+      .navbar-collapse {
+        @media (max-width: 991px) {
+          position: absolute;
+          top: 3.125rem;
+          left: 0;
+          background: $blk;
+          right: 0;
+          width: 97.5%;
+          z-index: 9;
+        }
+      }
+    }
+  
+    &-nav {
+      gap: 3.563rem;
+  
+      @media (max-width: 991px) {
+        gap: 0;
+      }
+  
+      li {
+        a {
+          position: relative;
+          color: $white;
+          padding: 0.625rem 0;
+  
+          @media (max-width: 991px) {
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid;
+            color: $white !important;
+          }
+  
+          &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: 0;
+            background: $white;
+            transition: .5s;
+  
+            @media (max-width: 991px) {
+              content: none;
+            }
+          }
+  
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+  
+        &.active {
+          a {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+  
+        &:last-child {
+          a {
+            @media (max-width: 991px) {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }

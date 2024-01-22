@@ -1,0 +1,248 @@
+h1,
+.h1 {
+    font-size: 4rem;
+    @include unineue(bold);
+
+    @media (max-width: 1024px) {
+        font-size: 3rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 2.5rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 3rem;
+    @include unineue(bold);
+
+    @media (max-width: 1024px) {
+        font-size: 2.25rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 2rem;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 2rem;
+    @include unineue(bold);
+}
+
+h4,
+.h4 {
+    font-size: 1.5rem;
+    @include unineue(bold);
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+    font-size: 0.875rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+li {
+    font-size: 1rem;
+}
+
+a {
+    font-size: 1rem;
+    color: $green;
+
+    &:hover {
+        color: $blk;
+    }
+}
+
+
+.bg-white,
+.bg-yellow {
+
+    .artical a,
+    .logo-text,
+    .logo-text:hover,
+    .navbar-nav li a,
+    .language ul li a,
+    .search form input::placeholder,
+    .search form input:focus,
+    .search form input,
+    .language ul li,
+    .custom-btn:hover,
+    .custom-btn.hover-btn,
+    .price-bx h3,
+    .price-bx h4,
+    .price-bx li a,
+    .price-bx .custom-btn.hover-btn,
+    .price-bx .hover-btn,
+    .price-bx .btn.custom-btn:hover,
+    .search_result-bx h3,
+    .search_result-bx p,
+    .hover-btn,
+    .search-wrap ul li a,
+    #google_translate_element select {
+        color: $blk;
+    }
+
+    .navbar-nav li a:after,
+    .custom-btn,
+    .custom-btn.hover-btn:hover,
+    .line,
+    .price-bx .line,
+    .price-bx .hover-btn:hover,
+    .price-bx .custom-btn,
+    .price-bx ul li a:hover,
+    .hover-btn:hover,
+    .search-wrap ul li a:hover,
+    .search-wrap.show::-webkit-scrollbar-thumb {
+        background-color: $blk;
+    }
+
+    .language ul li.active a,
+    .search form input,
+    .custom-btn,
+    .price-bx .btn.custom-btn:hover,
+    .search_result-bx .line,
+    .hover-btn {
+        border-color: $blk;
+    }
+
+    .search form button img {
+        filter: invert(1);
+    }
+
+    .price-bx,
+    .search_result-bx {
+        box-shadow: 0 0 8px #e9ecef;
+    }
+
+    .header {
+        background-color: $white;
+    }
+
+    .com__son {
+        filter: grayscale(100%);
+    }
+
+    #google_translate_element select {
+        background-image: url(../img/gt-blk.png);
+    }
+}
+
+.bg-yellow {
+    .header {
+        background-color: $yellow;
+    }
+
+    .com__son {
+        filter: brightness(100%) contrast(100%) hue-rotate(60deg);
+    }
+}
+
+.bg-green {
+
+    .custom-btn,
+    .custom-btn.hover-btn:hover,
+    .price-bx h3,
+    .price-bx h4,
+    .price-bx li a,
+    .price-bx .custom-btn.hover-btn,
+    .hover-btn:hover,
+    .price-bx .hover-btn,
+    .price-bx .btn.custom-btn:hover,
+    .search_result-bx h3,
+    .search_result-bx p,
+    .search-wrap ul li a {
+        color: $green;
+    }
+
+    .header,
+    .price-bx .line,
+    .price-bx .hover-btn:hover,
+    .price-bx .custom-btn,
+    .price-bx ul li a:hover,
+    .search_result-bx .line,
+    .search-wrap ul li a:hover,
+    .search-wrap.show::-webkit-scrollbar-thumb {
+        background-color: $green;
+    }
+
+    .com__son {
+        filter: hue-rotate(164deg);
+    }
+}
+
+.bg-red {
+
+    .custom-btn,
+    .custom-btn.hover-btn:hover,
+    .price-bx h3,
+    .price-bx h4,
+    .price-bx li a,
+    .price-bx .custom-btn.hover-btn,
+    .hover-btn:hover,
+    .price-bx .hover-btn,
+    .price-bx .btn.custom-btn:hover,
+    .search_result-bx h3,
+    .search_result-bx p,
+    .search-wrap ul li a {
+        color: $red;
+    }
+
+
+    .header,
+    .price-bx .line,
+    .price-bx .hover-btn:hover,
+    .price-bx .custom-btn,
+    .price-bx ul li a:hover,
+    .search_result-bx .line,
+    .search-wrap ul li a:hover,
+    .search-wrap.show::-webkit-scrollbar-thumb {
+        background-color: $red;
+    }
+
+}
+
+.bg-blue {
+
+    .custom-btn,
+    .custom-btn.hover-btn:hover,
+    .price-bx h3,
+    .price-bx h4,
+    .price-bx li a,
+    .price-bx .custom-btn.hover-btn,
+    .hover-btn:hover,
+    .price-bx .hover-btn,
+    .price-bx .btn.custom-btn:hover,
+    .search_result-bx h3,
+    .search_result-bx p,
+    .search-wrap ul li a {
+        color: $blue;
+    }
+
+
+    .header,
+    .price-bx .line,
+    .price-bx .hover-btn:hover,
+    .price-bx .custom-btn,
+    .price-bx ul li a:hover,
+    .search_result-bx .line,
+    .search-wrap ul li a:hover,
+    .search-wrap.show::-webkit-scrollbar-thumb {
+        background-color: $blue;
+    }
+
+    .com__son {
+        filter: hue-rotate(224deg);
+    }
+}

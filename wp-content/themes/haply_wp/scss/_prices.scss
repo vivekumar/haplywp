@@ -1,0 +1,222 @@
+.price {
+    .row {
+        .col-md-3 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-bx {
+        background-color: $white;
+        height: 45.5rem;
+        transition: max-height 0.15s ease-out;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        border: 2px solid #9F9F9F;
+        @include border-radius(8px);
+
+        &.customHeight {
+            height: 100%;
+            transition: max-height 0.25s ease-in;
+        }
+
+        .price-pd {
+            padding: 4rem 2rem 0;
+        }
+
+        .line {
+            max-width: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            margin-bottom: 0.625rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 1.875rem;
+        }
+
+        .btn {
+            display: block;
+            margin-bottom: 1rem;
+
+            &.custom-btn {
+                color: $white;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &.hover-btn {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        ul {
+            text-align: center;
+            padding: 1px;
+
+            li {
+                a {
+                    padding: 0.875rem;
+                    display: block;
+                    color: $blk;
+                    font-size: 1rem;
+                    border-top: 1px solid $white;
+                    border-bottom: 1px solid $white;
+
+                    &:hover {
+                        color: $green;
+                        border-color: $green;
+                    }
+
+                    i {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        font-size: 0.688rem;
+                        border: 2px solid;
+                        border-radius: 100%;
+                        padding: 2px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 5px;
+                    }
+
+
+                    span {
+                        &.toltip {
+                            position: relative;
+
+                            &::before {
+                                width: 0;
+                                height: 0;
+                                border-left: 12px solid transparent;
+                                border-right: 12px solid transparent;
+                                border-top: 16px solid $green;
+                                left: -3px;
+                                position: absolute;
+                                top: -18px;
+                            }
+                        }
+                    }
+                }
+
+                &.bordered {
+                    a {
+                        border-top: 2px solid;
+                        border-bottom: 2px solid;
+                    }
+                }
+
+                &.oToltip {
+                    position: relative;
+
+                    span {
+                        &.toltip {
+
+                            &::before {
+                                content: '';
+                            }
+                        }
+                    }
+
+                    a {}
+
+                    .toltipBx {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &-info {
+            padding: 2rem;
+            padding-top: 1rem;
+
+            p {
+                margin-bottom: 0;
+                font-size: 1rem;
+                border-bottom: 1px solid #9F9F9F;
+                padding-bottom: 2rem;
+            }
+        }
+
+
+
+        &.b {
+
+            &-white,
+            &-yellow,
+            &-blue,
+            &-red {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1rem;
+                }
+            }
+
+
+
+            &-white {
+                &::before {
+                    background-color: #ffffff;
+                }
+            }
+
+            &-yellow {
+                &::before {
+                    background-color: #FADF7F;
+                }
+            }
+
+            &-blue {
+                &::before {
+                    background-color: #4C86A8;
+                }
+            }
+
+            &-red {
+                &::before {
+                    background-color: #D33F49;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+.toltipBx {
+    max-width: 304px;
+    min-height: 116px;
+    background-color: $green;
+    padding: 8px;
+    position: absolute;
+    bottom: 55px;
+    right: 40px;
+    text-align: left;
+    display: none;
+
+    p {
+        font-size: 1rem;
+        color: $white;
+        margin-bottom: 0.625rem;
+    }
+}

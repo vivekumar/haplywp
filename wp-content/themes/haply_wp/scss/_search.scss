@@ -1,0 +1,122 @@
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+
+    @media (max-width: 768px) {
+        position: absolute;
+        top: 1.125rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        justify-content: center;
+    }
+
+    @media (max-width: 760px) {
+        gap: 0.625rem;
+    }
+
+    @media (max-width: 453px) {
+        position: relative;
+        top: 0;
+    }
+
+    form {
+        display: flex;
+        position: relative;
+
+        @media (max-width: 453px) {
+            margin-bottom: 0.938rem;
+        }
+
+        input {
+            font-size: 1rem;
+            color: $blk;
+            background-color: $white;
+            border: 1px solid $blk;
+            min-width: 14rem;
+            padding: 0.5rem 0.75rem;
+            padding-right: 1.875rem;
+            @include border-radius(8px);
+
+            @media (max-width: 768px) {
+                min-width: auto;
+                width: 100%;
+            }
+
+            &::placeholder {
+                color: $blk;
+            }
+
+            &:focus {
+                background-color: $white;
+                color: $blk;
+                @include border-radius(8px);
+            }
+
+            &::-webkit-search-cancel-button {
+                position: relative;
+                -webkit-text-fill-color: $white;
+                color: $white;
+            }
+        }
+
+        button {
+            padding: 0;
+            position: absolute;
+            right: 0.625rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-wrap {
+        position: absolute;
+        left: 0;
+        background: $white;
+        top: 4.688rem;
+        z-index: 9;
+        height: 0;
+        transition: .5s;
+        overflow: hidden;
+        box-shadow: 0 0 0.625rem #f5f5f5;
+
+        &.show {
+            height: 15.938rem;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        ul {
+            li {
+                a {
+                    padding: 0.5rem 1rem;
+                    display: block;
+                    border: 1px solid transparent;
+                    color: $green;
+
+                    &:hover {
+                        border-color: $white;
+                        color: $blk;
+                    }
+                }
+            }
+        }
+    }
+
+    .custom-btn {
+        background-color: $white;
+        color: $green;
+        border: 2px solid $white;
+
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+    }
+}
+
+.ds_none {
+    display: none;
+}

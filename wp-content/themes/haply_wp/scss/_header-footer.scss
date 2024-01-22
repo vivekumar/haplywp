@@ -1,0 +1,247 @@
+/*========================================================================================================
+================================ Header Scss ===================================================================
+===========================================================================================================*/
+header,
+section,
+footer {
+  @include full-width;
+}
+
+
+.header {
+  box-shadow: 0 0 8px rgb(0 0 0 / 16%);
+  padding: 18px 0;
+  transition: all 0.5s ease;
+  background-color: $green;
+
+  @media (max-width: 1300px) and (min-width: 992px) {
+    padding-bottom: 4.375rem;
+  }
+
+  @media (max-width: 768px) and (min-width: 454px) {
+    padding-top: 4.375rem;
+  }
+
+  &-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 991px) {
+      padding-left: 1.875rem
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    animation: smoothScroll 1s forwards;
+  }
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo {
+  &-text {
+    color: $white;
+    font-size: 2rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.language {
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      color: $white;
+
+      a {
+        color: $white;
+        padding: 8px 0;
+      }
+
+      &.active {
+        a {
+          border-bottom: 2px solid $white;
+        }
+      }
+
+      &:nth-child(2) {
+        margin: 0 0.938rem;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 453px) {
+  .mb_none {
+    display: none;
+  }
+
+  .ds_none {
+    display: block;
+  }
+}
+
+/*========================================================================================================
+================================ Footer Scss ===================================================================
+===========================================================================================================*/
+
+.footer {
+  padding: 2rem 0;
+  box-shadow: 0 0 8px rgb(0 0 0 / 16%);
+
+
+
+  .row {
+
+    .col-lg-7,
+    .col-lg-5 {
+      @media (max-width: 1575px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-logo,
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media (max-width: 1575px) {
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (max-width: 560px) {
+      gap: 1rem;
+    }
+
+    a {
+      img {}
+
+      i {
+        color: lighten($green, 50%);
+        font-size: 1.5rem;
+        transition: .5s;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+    ul {
+      li {
+        a {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    @media (max-width: 1575px) {
+      margin-top: 2rem;
+      padding: 5px;
+
+      ul {
+        background: #f1f1f1;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 560px) {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    li {
+      position: relative;
+
+      @media (max-width: 560px) {
+        width: 100%;
+        display: block;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -2px;
+        top: 58%;
+        transform: translateY(-50%);
+        background: $green;
+        width: 4px;
+        height: 4px;
+        @include border-radius(100%);
+
+        @media (max-width: 560px) {
+          content: none;
+        }
+      }
+
+      &:last-child {
+        &::after {
+          content: none;
+        }
+
+        a {
+          border-bottom: none;
+        }
+      }
+
+      a {
+        font-size: 0.75rem;
+        color: $green;
+        padding: 0.875rem;
+
+        @media (max-width: 560px) {
+          display: block;
+          border-bottom: 1px solid rgb(36 158 73 / 10%);
+        }
+
+        &:hover {
+          color: $blk;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    ul {
+
+      li {
+        a {
+          font-size: 0.813rem;
+          @include unineue(bold);
+        }
+      }
+    }
+  }
+}

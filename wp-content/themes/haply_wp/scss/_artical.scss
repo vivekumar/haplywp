@@ -1,0 +1,278 @@
+/*========================================================================================================
+================================ hwto Scss ===================================================================
+===========================================================================================================*/
+.hwto {
+    &-user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .img-user {
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 100%;
+            margin-bottom: 0;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .user-info {
+            p {
+                @include unineue(bold);
+                margin-bottom: 0;
+
+                span {
+                    display: flex;
+                    @include unineue(regular);
+                }
+            }
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &-social {
+        p {
+            font-size: 0.875rem;
+            color: #9F9F9F;
+            text-transform: uppercase;
+            @include unineue(bold);
+            margin-bottom: 1rem !important;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            li {
+                a {
+                    font-size: 2rem;
+                    color: $green;
+                    opacity: 0.6;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.artical {
+    .h1 {
+        @include unineue(regular);
+        margin-bottom: 1.5rem;
+    }
+
+
+    h3,
+    p,
+    img,
+    ul {
+        margin-bottom: 2rem;
+    }
+
+    p,
+    li {
+
+        strong {
+            @include unineue(bold);
+        }
+    }
+
+    &-related {
+        padding-right: 5rem;
+
+        p {
+            strong {
+                @include unineue(bold);
+            }
+        }
+
+        ul {
+            li {
+
+                a {
+                    display: block;
+                    text-decoration: underline;
+                    padding: 0.938rem 0;
+                }
+            }
+        }
+
+
+
+        &-bx {
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+
+            .img-style {
+                position: relative;
+                height: 13.563rem;
+                overflow: hidden;
+                @include border-radius(8px 8px 0 0);
+
+
+                @media (max-width: 767px) {
+                    height: auto;
+                }
+
+                &::before {
+                    content: '';
+                    @include overlay;
+                    transition: .5s;
+                    // background-color: rgb(18 158 65 / 50%);
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+
+                    @media (max-width: 767px) {
+                        height: auto;
+                    }
+                }
+
+                h3 {
+                    @include img-center(both);
+                    width: 100%;
+                    padding: 1rem;
+
+                    font-size: 1.875rem;
+                    color: $white;
+                    @include unineue(bold);
+                    text-align: center;
+                }
+            }
+
+            .content-style {
+                padding: 1rem;
+                @include border-radius(0 0 8px 8px);
+                border: 1px solid $blk;
+                border-top: 0;
+
+                p {
+                    color: #9F9F9F;
+                    line-height: 1.313rem;
+                    margin-bottom: 5px;
+                }
+
+                h5 {
+                    color: $blk;
+                    line-height: 1.688rem;
+                    transition: .5s;
+                }
+            }
+
+            &:hover {
+                .img-style {
+                    &::before {
+                        background-color: rgb(18 158 65 / 50%);
+                    }
+                }
+
+                .content-style {
+                    border-color: $green;
+
+                    h5 {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        padding-right: 4rem;
+        margin-bottom: 2rem;
+
+        p {}
+
+        h3 {}
+
+        img {}
+
+        ol,
+        ul {
+            padding-left: 1rem;
+        }
+
+        ul {
+            margin-bottom: 2rem;
+
+            li {
+                list-style: disc;
+            }
+        }
+
+        ol {
+            margin-bottom: 2rem;
+
+            li {}
+        }
+    }
+
+    .tip {
+        border: 2px solid;
+        padding: 1rem;
+
+        h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &-category {
+        border: 1px solid;
+        padding: 1rem;
+
+        p {
+            margin-bottom: 1rem;
+
+            strong {}
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-img {
+        height: 500px;
+        background-color: #E6E6E6;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+.divider {
+    margin: 2rem 0;
+    height: 1px;
+    width: 100%;
+    background: #9F9F9F;
+}
+
+.mb-66 {
+    margin-bottom: 4.125rem;
+}

@@ -1,0 +1,44 @@
+/* Theme Name: Haply-WP 
+Text Domain: HaplyWP
+Author Name: Haply-WP
+
+*/
+
+.cstm-blog-btn-col{height: inherit !important;}
+.eckb-category-archive-reset .eckb-article-read-more-icon.epkbfa {
+    margin-left: 10px;
+}
+.search {
+    margin: 1rem 0 !important;
+}
+div#how_to_datafetch {
+    position: absolute;
+    top: 50px;
+    border: 1px solid #f9f9f9;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #fbfbfb;
+}
+
+
+@media only screen and (max-width:991px){
+    /* .cstm-blog-btn-col p{justify-content:flex-start !important;} */
+    .col-lg-3.cstm-blog-img-col span img {
+        display: block !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+    /* .eckb-article-container .cstm-blog-btn-col{
+        padding: 30px !important;
+    } */
+    /* .cstm-blog-btn-col a{width: 40%!important;} */
+}
+@media only screen and (max-width:767px){
+    .search form .btn-search{top:50%;}
+}
+@media only screen and (max-width:475px){
+    .cstm-blog-btn-col a{width: 100%!important;}
+    .cstm-blog-btn-col{display: inherit!Important;}
+    .cstm-blog-btn-col{flex-direction:column!important}
+}
